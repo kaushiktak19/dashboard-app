@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dashboard Application
 
-## Getting Started
+A sleek and responsive dashboard built with **Next.js** and styled using **Tailwind CSS**. The dashboard features key metrics, data visualizations, and a user-friendly interface across four sections: **Home**, **Analytics**, **Profile**, and **Settings**.
 
-First, run the development server:
+## Features
+- **Home**: Displays key metrics like Total Users, Revenue, and Active Sessions.
+- **Analytics**: Interactive data visualizations with Bar, Pie, and Line charts.
+- **Profile**: Displays user details and role information.
+- **Settings**: Allows users to adjust preferences like theme and notifications.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technologies Used
+- **Next.js**: Framework for building the application.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Recharts**: Data visualization library for creating charts.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Design Approach:
+The dashboard was designed to offer a clean, modern, and intuitive user interface (UI) while maintaining a responsive layout for a seamless experience across devices. I prioritized simplicity and clarity, using a cohesive color scheme with shades of blue, green, purple, and gray to highlight important metrics and visual elements. The left sidebar navigation ensures easy access to the main sections of the dashboard: Home, Analytics, Profile, and Settings.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Each section was designed with user-friendliness in mind, with the content organized clearly and concisely. The Home page focuses on key business metrics, the Analytics page displays interactive charts, the Profile page provides personalized user details, and the Settings page allows users to customize their preferences. The layout adapts fluidly to different screen sizes, providing an optimal experience on both desktop and mobile.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Implementation Approach:
+Using Next.js as the framework, I built a single-page application with a responsive design that automatically adjusts to various screen sizes. Tailwind CSS was used for styling, allowing for quick customization and maintaining a consistent look throughout the app.
 
-## Learn More
+### Key Features:
 
-To learn more about Next.js, take a look at the following resources:
+#### Home Page:
+- Displays key metrics like Total Users, Revenue, and Active Sessions.
+- Each metric is presented in an easily readable card format with hover effects for interaction.
+- The layout is grid-based for a clean presentation of information.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Analytics Page:
+- Features three types of charts using Recharts:
+  - **Bar Chart**: Shows monthly users and revenue, providing insight into business performance.
+  - **Pie Chart**: Visualizes revenue distribution by category (e.g., Electronics, Fashion, Home).
+  - **Line Chart**: Tracks active sessions throughout the week, helping users monitor user activity.
+- The page uses `ResponsiveContainer` to ensure the charts resize correctly across devices.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### Profile Page:
+- Displays the user’s details in a neat, organized grid layout.
+- Sections for email and role are clearly labeled, with a clean background to emphasize the information.
 
-## Deploy on Vercel
+#### Settings Page:
+- Provides customization options such as theme and notification settings.
+- The layout is simple yet effective, with toggle-able settings clearly represented.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Challenges:
+- Ensuring responsive design was one of the main challenges, particularly making sure the layout and charts resized smoothly on both mobile and desktop.
+- Integrating the charts (Bar, Pie, and Line) from Recharts and ensuring they displayed correctly on various screen sizes, while maintaining legibility, took additional effort.
+- Styling the left sidebar for the mobile layout was challenging but crucial, and I utilized Tailwind’s utility-first approach to ensure the transition from a desktop sidebar to a mobile-friendly bottom navigation bar was smooth and functional.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Despite these challenges, I was able to create a visually appealing, functional, and responsive dashboard with clear data visualizations, making it both user-friendly and informative.
